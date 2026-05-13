@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verbatica — интерпритатор аэрокосмической документации с AI-ассистентом, глоссарием и проверкой терминов. Кейс студии Геккодио.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Интерпритатор аэрокосмической документации - кейс Геккодио</title>
+  <base href="../">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Интерпритатор аэрокосмической документации - кейс Геккодио">
+  <meta property="og:description" content="Собрали AI-помощника для перевода и проверки технической документации.">
+  <meta property="og:image" content="assets/img/case обложка verbatica.png">
+
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/SuisseIntl-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-Medium.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-SemiBold.otf" as="font" type="font/otf" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css?v=blue-20260511-5">
+  <link rel="stylesheet" href="assets/css/base.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/header.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/modal.css?v=fix-20260512-1">
+  <link rel="stylesheet" href="assets/css/home-footer.css">
+  <link rel="stylesheet" href="assets/css/home-cta.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/case-page.css?v=final-20260512-4">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <article class="case-page">
+      <div class="container">
+        <nav class="case-page__breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a>
+          <span class="case-page__breadcrumbs-separator">/</span>
+          <a href="portfolio.html">Проекты</a>
+          <span class="case-page__breadcrumbs-separator">/</span>
+          <span>Verbatica</span>
+        </nav>
+
+        <header class="case-page__head">
+          <div class="case-page__head-info">
+            <h1 class="case-page__title">Интерпритатор аэрокосмической документации</h1>
+            <p class="case-page__subtitle">AI-инструмент для команды Verbatica: переводит технические фрагменты, сверяется с глоссарием и помогает быстро проверять терминологию.</p>
+          </div>
+
+          <div class="case-page__meta">
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Клиент</span><span class="case-page__meta-value">Verbatica</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Срок</span><span class="case-page__meta-value">2 недели</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Год</span><span class="case-page__meta-value">2026</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Стек</span><span class="case-page__meta-value">Lovable · Sheets · OpenAI</span></div>
+          </div>
+        </header>
+
+        <div class="case-page__cover case-page__cover--contain case-page__cover--fit-height">
+          <img src="assets/img/case обложка verbatica.png?v=20260512-1" alt="Интерпритатор аэрокосмической документации, Verbatica">
+        </div>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Задача</h2>
+            <div class="case-section__body">
+              <p>Команде Verbatica нужно было ускорить перевод аэрокосмической документации, где важны точные формулировки, единая терминология и аккуратная работа с техническим контекстом.</p>
+              <p>Обычный переводчик не подходил: часть терминов требовала внутреннего глоссария, а результат нужно было быстро проверять перед передачей специалистам.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Решение</h2>
+            <div class="case-section__body">
+              <p>Собрали рабочий прототип переводчика на Lovable, подключили таблицы Sheets как базу терминов и настроили OpenAI так, чтобы ответы опирались на контекст документа и глоссарий клиента.</p>
+              <ul>
+                <li>Интерфейс для вставки и проверки технических фрагментов</li>
+                <li>Глоссарий терминов и устойчивых переводов в Sheets</li>
+                <li>AI-промпты под аэрокосмическую документацию</li>
+                <li>Сравнение исходного текста и перевода в одном экране</li>
+                <li>Быстрая корректировка спорных терминов без разработки</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Результат</h2>
+            <div class="case-section__body">
+              <p>За 2 недели Verbatica получила инструмент, который помогает быстрее разбирать технические документы и поддерживать единый словарь терминов. Команда может пополнять базу знаний в Sheets и постепенно улучшать качество переводов без пересборки продукта.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-page__footer-actions">
+          <a class="btn btn--primary" href="https://translate.verbatica.ai/" target="_blank" rel="noopener noreferrer">Перейти на сайт ↗</a>
+          <a class="btn btn--ghost" href="portfolio.html">К другим проектам</a>
+        </div>
+
+        <section class="case-page__cta">
+          <div class="discuss__card">
+            <div class="discuss__bg" aria-hidden="true"><img src="assets/img/gecko1.svg?v=blue-20260511-5" alt=""></div>
+            <div class="discuss__content">
+              <span class="discuss__eyebrow">Хотите AI-ассистента</span>
+              <h2 class="discuss__title">Соберём бота под ваш продукт и базу знаний</h2>
+              <p class="discuss__text">Без хайпа: говорим, что реально работает, и где AI избыточен.</p>
+              <a class="discuss__cta btn btn--primary btn--lg" href="#contact" data-modal-open="contact">Оставить заявку <span class="discuss__cta-arrow" aria-hidden="true">></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <div id="footer-slot"></div>
+  <div id="modal-slot"></div>
+
+  <script src="assets/js/partials.js?v=partials-20260511-blue-1"></script>
+  <script src="assets/js/header.js?v=dropdown-20260511-1"></script>
+  <script src="assets/js/modal.js?v=fix-20260512-1"></script>
+  <script src="assets/js/case-lightbox.js?v=case-refresh-20260511-1"></script>
+</body>
+</html>
+
+
+
+

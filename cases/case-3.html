@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panteon — переводчик католических Месс: панель для перевода, подготовки изображений и публикации чтений. Кейс студии Геккодио.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Переводчик католических Месс - кейс Геккодио</title>
+  <base href="../">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Переводчик католических Месс - кейс Геккодио">
+  <meta property="og:description" content="Панель для перевода, подготовки изображений и публикации чтений для Panteon.">
+  <meta property="og:image" content="assets/img/case обложка lingua.png">
+
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/SuisseIntl-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-Medium.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-SemiBold.otf" as="font" type="font/otf" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css?v=blue-20260511-5">
+  <link rel="stylesheet" href="assets/css/base.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/header.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/modal.css?v=fix-20260512-1">
+  <link rel="stylesheet" href="assets/css/home-footer.css">
+  <link rel="stylesheet" href="assets/css/home-cta.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/case-page.css?v=final-20260512-4">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <article class="case-page">
+      <div class="container">
+        <nav class="case-page__breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a>
+          <span class="case-page__breadcrumbs-separator">/</span>
+          <a href="portfolio.html">Проекты</a>
+          <span class="case-page__breadcrumbs-separator">/</span>
+          <span>Panteon</span>
+        </nav>
+
+        <header class="case-page__head">
+          <div class="case-page__head-info">
+            <h1 class="case-page__title">Переводчик католических Месс</h1>
+            <p class="case-page__subtitle">Веб-приложение для Panteon: синхронный переводчик чтений на 11 языках.</p>
+          </div>
+
+          <div class="case-page__meta">
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Клиент</span><span class="case-page__meta-value">Panteon</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Срок</span><span class="case-page__meta-value">3 дня</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Год</span><span class="case-page__meta-value">2025</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Стек</span><span class="case-page__meta-value">Lovable · n8n · OpenAI · Supabase</span></div>
+          </div>
+        </header>
+
+        <div class="case-page__cover case-page__cover--contain">
+          <img src="assets/img/case обложка lingua.png?v=20260512-1" alt="Интерфейс переводчика католических Месс, Panteon">
+        </div>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Задача</h2>
+            <div class="case-section__body">
+              <p>Собор Святого Петра ежегодно принимает миллионы людей со всего мира, однако языковой барьер часто мешает верующим полноценно участвовать в литургиях, которые проводятся на латыни или итальянском.</p>
+              <p>Нам выпала возможность разработать высокотехнологичное решение для синхронного перевода богослужений в режиме реального времени. Система должна поддерживать 11 языков и быть максимально доступной: иметь простой интерфейс, не иметь задержки, а также справляться с огромными нагрузками в условиях ограниченного интернет-соединения внутри исторического здания.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Решение</h2>
+            <div class="case-section__body">
+              <p>Мы разработали систему на базе n8n, которая выполняет роль центрального оркестратора. В качестве фронтенда использовали Lovable, а для хранения данных и работы в реальном времени&nbsp;&mdash; Supabase. Такой стек позволил нам быстро собрать масштабируемый сервис, способный обрабатывать поток данных без задержек.</p>
+              <ul>
+                <li>Настроили автоматизированный воркфлоу, который принимает данные и распределяет нагрузку между несколькими моделями OpenAI</li>
+                <li>Администратор в приложении добавляет нужное, а система распознает и переводит для читателей, сразу представляя информацию в нужном виде, независимо от языка</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <figure class="case-page__inline-image case-page__inline-image--contain">
+          <img src="assets/img/panteon-n8n-workflow.jpg?v=20260511-1" alt="n8n сценарий для переводчика богослужебных чтений">
+        </figure>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Результат</h2>
+            <div class="case-section__body">
+              <p>Всего за 3 дня мы создали рабочее приложение, которое исключает человеческий фактор. Теперь подготовка мультиязычного контента для приложения занимает считанные минуты: система сама переводит тексты с фото и мгновенно делает их доступными для читателей со всего мира.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-page__footer-actions">
+          <a class="btn btn--primary" href="https://italian-lingua-fluent.lovable.app/" target="_blank" rel="noopener noreferrer">Перейти на сайт ↗</a>
+          <a class="btn btn--ghost" href="portfolio.html">К другим проектам</a>
+        </div>
+
+        <section class="case-page__cta">
+          <div class="discuss__card">
+            <div class="discuss__bg" aria-hidden="true"><img src="assets/img/gecko1.svg?v=blue-20260511-5" alt=""></div>
+            <div class="discuss__content">
+              <span class="discuss__eyebrow">Нужен AI-инструмент</span>
+              <h2 class="discuss__title">Соберём рабочий сервис под ваш процесс</h2>
+              <p class="discuss__text">Покажем, где AI ускорит задачу, а где достаточно простой автоматизации.</p>
+              <a class="discuss__cta btn btn--primary btn--lg" href="#contact" data-modal-open="contact">Оставить заявку <span class="discuss__cta-arrow" aria-hidden="true">></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <div id="footer-slot"></div>
+  <div id="modal-slot"></div>
+
+  <script src="assets/js/partials.js?v=partials-20260511-blue-1"></script>
+  <script src="assets/js/header.js?v=dropdown-20260511-1"></script>
+  <script src="assets/js/modal.js?v=fix-20260512-1"></script>
+  <script src="assets/js/case-lightbox.js?v=case-refresh-20260511-1"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Геккодио - студия low-code разработки. Сайты, веб-приложения, фирменный стиль, автоматизация и интеграции с нейросетями для малого бизнеса и стартапов.">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Геккодио - студия low-code разработки</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Геккодио - студия low-code разработки">
+  <meta property="og:description" content="Сайты, веб-приложения, автоматизация и интеграции с нейросетями для малого бизнеса и стартапов.">
+  <meta property="og:image" content="assets/img/logo.svg">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+
+  <link rel="preload" href="assets/fonts/SuisseIntl-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-Medium.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-SemiBold.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-Bold.otf" as="font" type="font/otf" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css?v=blue-20260511-5">
+  <link rel="stylesheet" href="assets/css/base.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/header.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/modal.css?v=fix-20260512-1">
+  <link rel="stylesheet" href="assets/css/home-hero.css?v=fix-20260512-4">
+  <link rel="stylesheet" href="assets/css/home-about.css?v=blue-20260511-5">
+  <link rel="stylesheet" href="assets/css/home-services.css?v=blue-20260511-5">
+  <link rel="stylesheet" href="assets/css/home-process.css?v=buttons-20260510-1">
+  <link rel="stylesheet" href="assets/css/home-tech.css?v=buttons-20260510-1">
+  <link rel="stylesheet" href="assets/css/home-cases.css?v=fix-20260512-7">
+  <link rel="stylesheet" href="assets/css/home-reviews.css?v=reviews-20260510-1">
+  <link rel="stylesheet" href="assets/css/home-cta.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/home-faq.css">
+  <link rel="stylesheet" href="assets/css/home-footer.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <span class="hero__eyebrow">
+              Помогаем точными методами
+            </span>
+
+            <h1 class="hero__title">
+              <span class="hero__title-desktop">
+                Создаём<br>
+                <span class="hero__rotator-wrapper">
+                  <span class="hero__rotator" data-hero-rotator>цифровые решения</span>
+                </span><br>
+                для малого бизнеса<br>
+                и&nbsp;стартапов
+              </span>
+              <span class="hero__title-mobile">
+                Создаём<br>цифровые&nbsp;решения<br>для&nbsp;малого бизнеса<br>и&nbsp;стартапов
+              </span>
+            </h1>
+
+            <div class="hero__actions">
+              <a
+                href="#contact"
+                class="hero__cta"
+                data-modal-open="contact"
+                aria-label="Оставить заявку"
+              >
+                <svg class="hero__cta-ring" viewBox="0 0 200 200" aria-hidden="true">
+                  <defs>
+                    <path id="hero-cta-path" d="M 100,100 m -72,0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"/>
+                  </defs>
+                  <text class="hero__cta-ring-text">
+                    <textPath href="#hero-cta-path" startOffset="0">
+                      Оставить заявку • Оставить заявку • Оставить заявку •
+                    </textPath>
+                  </text>
+                </svg>
+                <img class="hero__cta-logo" src="assets/img/logo.svg" alt="">
+                <span class="hero__cta-marquee" aria-hidden="true">
+                  <span class="hero__cta-marquee-track">
+                    <span>Оставить заявку&nbsp;•&nbsp;</span>
+                    <span>Оставить заявку&nbsp;•&nbsp;</span>
+                    <span>Оставить заявку&nbsp;•&nbsp;</span>
+                    <span>Оставить заявку&nbsp;•&nbsp;</span>
+                    <span aria-hidden="true">Оставить заявку&nbsp;•&nbsp;</span>
+                    <span aria-hidden="true">Оставить заявку&nbsp;•&nbsp;</span>
+                    <span aria-hidden="true">Оставить заявку&nbsp;•&nbsp;</span>
+                    <span aria-hidden="true">Оставить заявку&nbsp;•&nbsp;</span>
+                  </span>
+                </span>
+              </a>
+              <p class="hero__cta-description">
+                Мы - молодая студия веб-разработки и автоматизации, помогающая бизнесу решать задачи быстрее с помощью облачных сервисов, low-code подхода и современных цифровых инструментов. Мы создаём эффективные, качественные и масштабируемые решения, которые закрывают потребности клиента сегодня и формируют основу для дальнейшего роста.
+              </p>
+            </div>
+          </div>
+
+          <aside class="hero__side">
+            <div class="hero__features">
+              <article class="hero__team-card">
+                <img
+                  class="hero__illustration"
+                  src="assets/img/gecko1.svg?v=blue-20260511-5"
+                  alt=""
+                  aria-hidden="true"
+                >
+                <span class="hero__team-tag hero__team-tag--top">#новое</span>
+                <div class="hero__team-photo" aria-hidden="true">
+                  <img
+                    src="assets/img/new_vk.png"
+                    alt="Команда Геккодио"
+                    loading="lazy"
+                  >
+                </div>
+                <div class="hero__team-chips">
+                  <span class="hero__team-chip hero__team-chip--filled">Эффективность</span>
+                  <span class="hero__team-chip hero__team-chip--outline">Скорость</span>
+                </div>
+                <p class="hero__team-text">Быстрее, чем классическая разработка - без компромиссов в&nbsp;качестве. Создаём решения, которые сразу работают на&nbsp;задачи бизнеса и&nbsp;масштабируются вместе с&nbsp;ним.</p>
+                <span class="hero__team-tag hero__team-tag--bottom">#новое</span>
+            </article>
+              <article class="hero__feature hero__feature--coral">
+                <span class="hero__team-tag hero__team-tag--top hero__team-tag--coral">#соцсети</span>
+                <p class="hero__feature-text hero__feature-text--coral">Мы активно ведём социальные сети, где делимся нашими кейсами, процессами разработки и полезным контентом для бизнеса. Также открыто рассказываем о тех инструментах, которыми сами пользуемся.</p>
+                <div class="hero__socials">
+                  <a href="https://t.me/geckodio" target="_blank" rel="noopener noreferrer" class="hero__social" aria-label="Telegram">
+                    <img class="hero__social-img hero__social-img--default" src="assets/img/tg.svg" alt="Telegram">
+                    <img class="hero__social-img hero__social-img--hover" src="assets/img/tg_hover.svg" alt="" aria-hidden="true">
+                  </a>
+                  <a href="https://vk.com/geckodio" target="_blank" rel="noopener noreferrer" class="hero__social" aria-label="ВКонтакте">
+                    <img class="hero__social-img hero__social-img--default" src="assets/img/vk.svg" alt="ВКонтакте">
+                    <img class="hero__social-img hero__social-img--hover" src="assets/img/vk_hover.svg" alt="" aria-hidden="true">
+                  </a>
+                  <a href="https://dzen.ru/geckodio" target="_blank" rel="noopener noreferrer" class="hero__social" aria-label="Дзен">
+                    <img class="hero__social-img hero__social-img--default" src="assets/img/dzen.svg" alt="Дзен">
+                    <img class="hero__social-img hero__social-img--hover" src="assets/img/dzen_hover.svg" alt="" aria-hidden="true">
+                  </a>
+                </div>
+                <span class="hero__team-tag hero__team-tag--bottom hero__team-tag--coral">#соцсети</span>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="about__title">
+          <span class="about__title-accent">В чем преуспеваем</span>
+          <span class="about__stickers" aria-hidden="true">
+            <span class="about__sticker about__sticker--result">про результат</span>
+            <span class="about__sticker about__sticker--fast">быстро</span>
+          </span>
+        </h2>
+
+        <div class="about__body">
+          <div class="about__lead-col">
+            <p class="section__lead">Мы помогаем бизнесу решать задачи с помощью актуальных технологий и индивидуального подхода. Объединяем скорость low-code инструментов с вдумчивым подходом, чтобы привнести лучший результат быстрее, дешевле и без потери качества.</p>
+            <img
+              class="about__footprints"
+              src="assets/img/gecko_footprints.svg?v=blue-20260511-5"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="about__cards-col">
+          <div class="about__stack-wrap">
+            <div class="about__stack">
+              <article class="about__card">
+                <div class="about__card-content">
+                  <h3 class="about__card-title">Быстрый запуск</h3>
+                  <p class="about__card-text">Low-code инструменты позволяют запускать продукты в 3 раза быстрее классической разработки - без потери качества и гибкости.</p>
+                </div>
+                <div class="about__card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>
+                  </svg>
+                </div>
+              </article>
+
+              <article class="about__card">
+                <div class="about__card-content">
+                  <h3 class="about__card-title">Прозрачный процесс</h3>
+                  <p class="about__card-text">На&nbsp;каждом этапе вы видите прогресс, сроки и&nbsp;решения. Никаких чёрных ящиков и&nbsp;неожиданностей в&nbsp;конце проекта.</p>
+                </div>
+                <div class="about__card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+              </article>
+
+              <article class="about__card">
+                <div class="about__card-content">
+                  <h3 class="about__card-title">Полный цикл</h3>
+                  <p class="about__card-text">От исследования и UX-дизайна до разработки, автоматизации и сопровождения - всё под одной крышей, одной командой.</p>
+                </div>
+                <div class="about__card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3 2 8l10 5 10-5-10-5Z"/>
+                    <path d="m2 13 10 5 10-5"/>
+                    <path d="m2 18 10 5 10-5"/>
+                  </svg>
+                </div>
+              </article>
+
+              <article class="about__card">
+                <div class="about__card-content">
+                  <h3 class="about__card-title">AI и автоматизация</h3>
+                  <p class="about__card-text">Интегрируем современные нейросети и настраиваем автоматизации, которые снимают с бизнеса рутинные задачи.</p>
+                </div>
+                <div class="about__card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                    <rect x="9" y="9" width="6" height="6"/>
+                    <path d="M9 2v2"/>
+                    <path d="M15 2v2"/>
+                    <path d="M9 20v2"/>
+                    <path d="M15 20v2"/>
+                    <path d="M2 9h2"/>
+                    <path d="M2 15h2"/>
+                    <path d="M20 9h2"/>
+                    <path d="M20 15h2"/>
+                  </svg>
+                </div>
+              </article>
+
+              <article class="about__card">
+                <div class="about__card-content">
+                  <h3 class="about__card-title">Гибкий подход</h3>
+                  <p class="about__card-text">Подбираем стек, процесс и формат сотрудничества под задачу клиента, а не втягиваем в универсальный шаблон.</p>
+                </div>
+                <div class="about__card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h10"/>
+                    <path d="M18 6h2"/>
+                    <path d="M4 12h4"/>
+                    <path d="M12 12h8"/>
+                    <path d="M4 18h14"/>
+                    <path d="M20 18h0.01"/>
+                    <circle cx="16" cy="6" r="2"/>
+                    <circle cx="10" cy="12" r="2"/>
+                    <circle cx="19" cy="18" r="2"/>
+                  </svg>
+                </div>
+              </article>
+
+              <article class="about__card">
+                <div class="about__card-content">
+                  <h3 class="about__card-title">Надёжный партнёр</h3>
+                  <p class="about__card-text">Готовы работать на долгосрочный результат. Поддержка, развитие и масштабирование вашего цифрового продукта после релиза.</p>
+                </div>
+                <div class="about__card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+              </article>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <h2 class="services__title">Услуги</h2>
+
+        <div class="services__grid">
+          <article class="services__card">
+            <div class="services__card-content">
+              <h3 class="services__card-title">Разработка сайтов</h3>
+              <p class="services__card-text">Создаём быстрые и понятные сайты, которые помогают презентовать продукт, привлекать клиентов и усиливать доверие к бренду.</p>
+            </div>
+            <img class="services__card-image" src="assets/img/g_service1.svg?v=blue-20260511-5" alt="" aria-hidden="true">
+            <a class="services__card-btn btn btn--primary" href="services/websites.html">Узнать больше</a>
+          </article>
+
+          <article class="services__card">
+            <div class="services__card-content">
+              <h3 class="services__card-title">Веб-приложения</h3>
+              <p class="services__card-text">Проектируем и разрабатываем веб-приложения под задачи бизнеса: от внутренних кабинетов до клиентских сервисов с масштабируемой архитектурой.</p>
+            </div>
+            <img class="services__card-image" src="assets/img/g_service2.svg?v=blue-20260511-5" alt="" aria-hidden="true">
+            <a class="services__card-btn btn btn--primary" href="services/web-apps.html">Узнать больше</a>
+          </article>
+
+          <article class="services__card">
+            <div class="services__card-content">
+              <h3 class="services__card-title">UI/UX дизайн</h3>
+              <p class="services__card-text">Продумываем интерфейсы и пользовательские сценарии так, чтобы продукт был визуально цельным, удобным и понятным с первого экрана.</p>
+            </div>
+            <img class="services__card-image" src="assets/img/g_service3.svg?v=blue-20260511-5" alt="" aria-hidden="true">
+            <a class="services__card-btn btn btn--primary" href="services/branding-ui.html">Узнать больше</a>
+          </article>
+
+          <article class="services__card">
+            <div class="services__card-content">
+              <h3 class="services__card-title">Автоматизация</h3>
+              <p class="services__card-text">Настраиваем автоматические процессы, которые убирают рутину, сокращают время на операции и повышают управляемость команды.</p>
+            </div>
+            <img class="services__card-image" src="assets/img/g_service4.svg?v=blue-20260511-5" alt="" aria-hidden="true">
+            <a class="services__card-btn btn btn--primary" href="services/automation.html">Узнать больше</a>
+          </article>
+
+          <article class="services__card">
+            <div class="services__card-content">
+              <h3 class="services__card-title">Интеграции</h3>
+              <p class="services__card-text">Соединяем CRM, формы, базы данных, мессенджеры и внешние сервисы в единую систему, чтобы данные и процессы работали синхронно.</p>
+            </div>
+            <img class="services__card-image" src="assets/img/g_service5.svg?v=blue-20260511-5" alt="" aria-hidden="true">
+            <a class="services__card-btn btn btn--primary" href="services/ai-integrations.html">Узнать больше</a>
+          </article>
+
+          <article class="services__card">
+            <div class="services__card-content">
+              <h3 class="services__card-title">Нейросети</h3>
+              <p class="services__card-text">Внедряем AI-инструменты в бизнес-процессы: генерацию контента, анализ данных и интеллектуальных ассистентов для вашей команды.</p>
+            </div>
+            <img class="services__card-image" src="assets/img/g_service6.svg?v=blue-20260511-5" alt="" aria-hidden="true">
+            <a class="services__card-btn btn btn--primary" href="services/ai-integrations.html">Узнать больше</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <h2 class="process__title">Как мы работаем</h2>
+
+        <div class="process__layout">
+          <article class="process__step process__step--below process__step--1">
+            <h3 class="process__step-title">Обдумываем</h3>
+            <p class="process__step-text">Мы изучаем ваши цели, определяем правильное направление и убеждаемся, что мы полностью понимаем, что вам нужно, а вы полностью понимаете, что мы делаем.</p>
+          </article>
+
+          <article class="process__step process__step--above process__step--2">
+            <h3 class="process__step-title">Создание</h3>
+            <p class="process__step-text">Мы берём на себя всё: чистую работу, адаптивный дизайн и конфигурацию, рассчитанную на вашу автономию.</p>
+          </article>
+
+          <article class="process__step process__step--below process__step--3">
+            <h3 class="process__step-title">Обратная связь</h3>
+            <p class="process__step-text">Наблюдайте за развитием вашего проекта, показываем промежуточные результаты, отслеживайте прогресс и определяйте приоритеты.</p>
+          </article>
+
+          <article class="process__step process__step--above process__step--4">
+            <h3 class="process__step-title">Запуск</h3>
+            <p class="process__step-text">Поддерживая вас на этом важном этапе запуска, обеспечивая стабильность и производительность, мы заботимся о том, чтобы вы были настроены на плавное масштабирование.</p>
+          </article>
+
+          <article class="process__step process__step--below process__step--5">
+            <h3 class="process__step-title">Поддержка</h3>
+            <p class="process__step-text">Улучшаем, вводим новые функции и оказываем поддержку. Ваш продукт продолжает развиваться, пока вы управляете своим контентом.</p>
+          </article>
+
+          <div class="process__rail" aria-hidden="true">
+            <span class="process__dot"></span>
+            <span class="process__dot"></span>
+            <span class="process__dot"></span>
+            <span class="process__dot"></span>
+            <span class="process__dot"></span>
+          </div>
+        </div>
+
+        <div class="process__cta-wrap">
+          <a class="process__cta btn" href="#contact" data-modal-open="contact">Выбрать подход Геккодио &gt;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tech" id="tech">
+      <div class="container">
+        <div class="tech__header">
+          <h2 class="tech__title">Надежные инструменты</h2>
+          <div class="tech__intro">
+            <p class="tech__text">Проверенные инструменты, которые позволяют нам быстро продвигаться вперед, уверенно масштабировать и выполнять точные работы с первого дня.</p>
+          <a class="tech__cta btn" href="#contact" data-modal-open="contact">Запустить мой проект &gt;</a>
+          </div>
+        </div>
+
+        <div class="tech__carousel" aria-hidden="true">
+          <div class="tech__track">
+            <img class="tech__logo" src="assets/img/weweb logo.svg" alt="WeWeb">
+            <img class="tech__logo" src="assets/img/Figma logo.svg" alt="Figma">
+            <img class="tech__logo" src="assets/img/n8n logo.svg" alt="n8n">
+            <img class="tech__logo" src="assets/img/supabase logo.svg" alt="Supabase">
+            <img class="tech__logo" src="assets/img/bubble logo.svg" alt="Bubble">
+            <img class="tech__logo" src="assets/img/Airtable-Logo-Black.png" alt="Airtable">
+            <img class="tech__logo" src="assets/img/weweb logo.svg" alt="WeWeb">
+            <img class="tech__logo" src="assets/img/Figma logo.svg" alt="Figma">
+            <img class="tech__logo" src="assets/img/n8n logo.svg" alt="n8n">
+            <img class="tech__logo" src="assets/img/supabase logo.svg" alt="Supabase">
+            <img class="tech__logo" src="assets/img/bubble logo.svg" alt="Bubble">
+            <img class="tech__logo" src="assets/img/Airtable-Logo-Black.png" alt="Airtable">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cases" id="cases">
+      <div class="container">
+        <header class="cases__head">
+          <h2 class="cases__title">Наши проекты</h2>
+          <p class="cases__lead">
+            Помогаем вам реализовывать современные, стильные, оптимизированные и работающие решения.
+          </p>
+        </header>
+
+        <ul class="cases__list">
+          <li class="cases__item">
+            <div class="cases__col cases__col--brand">
+              <img
+                class="cases__logo"
+                src="assets/img/school lab logo.png"
+                width="200"
+                height="48"
+                alt="School Lab"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="cases__brand-body">
+                <h3 class="cases__card-heading">Платформа онлайн обучения</h3>
+                <p class="cases__card-intro">
+                  Самая полезная подписка для школьника на помощь по всем предметам
+                </p>
+              </div>
+            </div>
+            <div class="cases__col cases__col--body">
+              <h3 class="cases__body-title">Результат</h3>
+              <div class="cases__body-actions">
+                <a class="cases__pill" href="https://schoolab.ru/" target="_blank" rel="noopener noreferrer">
+                  Сайт <span class="cases__pill-icon" aria-hidden="true">↗</span>
+                </a>
+                <a class="cases__pill" href="cases/case-1.html">
+                  Кейс <span class="cases__pill-icon" aria-hidden="true">></span>
+                </a>
+              </div>
+              <p class="cases__body-text">
+                Веб-платформа для проведения аттестации учеников. Мы разработали эффективное решение, в&nbsp;котором реализовали прохождение тестов, их&nbsp;создание, редактор для&nbsp;материалов и&nbsp;многое другое.
+              </p>
+            </div>
+            <div class="cases__col cases__col--media">
+              <img
+                class="cases__photo"
+                src="assets/img/school lab photo.png"
+                alt="Интерфейс и визуал проекта School Lab"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="520"
+              >
+            </div>
+          </li>
+
+          <li class="cases__item">
+            <div class="cases__col cases__col--brand">
+              <p class="cases__brand-name">Verbatica</p>
+              <div class="cases__brand-body">
+                <h3 class="cases__card-heading">Интерпритатор аэрокосмической документации</h3>
+                <p class="cases__card-intro">
+                  AI-инструмент для перевода, проверки терминов и работы с техническим глоссарием.
+                </p>
+              </div>
+            </div>
+            <div class="cases__col cases__col--body">
+              <h3 class="cases__body-title">Результат</h3>
+              <div class="cases__body-actions">
+                <a class="cases__pill" href="https://translate.verbatica.ai/" target="_blank" rel="noopener noreferrer">
+                  Сайт <span class="cases__pill-icon" aria-hidden="true">↗</span>
+                </a>
+                <a class="cases__pill" href="cases/case-2.html">
+                  Кейс <span class="cases__pill-icon" aria-hidden="true">></span>
+                </a>
+              </div>
+              <p class="cases__body-text">
+                Собрали переводчик для Verbatica за 2 недели: интерфейс, глоссарий в Sheets и связку с OpenAI.
+              </p>
+            </div>
+            <div class="cases__col cases__col--media">
+              <img
+                class="cases__photo"
+                src="assets/img/case обложка verbatica.png?v=20260512-1"
+                alt="Интерфейс переводчика Verbatica"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="520"
+              >
+            </div>
+          </li>
+        </ul>
+        <a class="cases__portfolio btn" href="portfolio.html">Портфолио &gt;</a>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <header class="reviews__head">
+          <h2 class="reviews__title">Что говорят клиенты</h2>
+          <p class="reviews__lead">Несколько слов от&nbsp;тех, с&nbsp;кем мы&nbsp;уже&nbsp;запустили проекты.</p>
+        </header>
+
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__quote-mark" aria-hidden="true">“</div>
+            <p class="reviews__text">Запустили платформу за&nbsp;5&nbsp;недель. Команда взяла бриф, согласовала прототип и&nbsp;сразу пошла в&nbsp;реализацию. Без долгих созвонов&nbsp;- и&nbsp;при этом результат полностью попал в&nbsp;задачу.</p>
+            <footer class="reviews__author">
+              <div class="reviews__avatar" aria-hidden="true">А</div>
+              <div class="reviews__meta">
+                <span class="reviews__name">Анастасия К.</span>
+                <span class="reviews__role">CEO, EdTech-стартап</span>
+              </div>
+            </footer>
+          </li>
+
+          <li class="reviews__item">
+            <div class="reviews__quote-mark" aria-hidden="true">“</div>
+            <p class="reviews__text">Честно говоря, сначала переживали, думали что-то пойдёт не&nbsp;так. На&nbsp;деле, получили инструмент, который ни&nbsp;разу не&nbsp;подвёл. Очень довольны.</p>
+            <footer class="reviews__author">
+              <div class="reviews__avatar" aria-hidden="true">М</div>
+              <div class="reviews__meta">
+                <span class="reviews__name">Мария Л.</span>
+                <span class="reviews__role">Product owner, B2B-сервис</span>
+              </div>
+            </footer>
+          </li>
+
+          <li class="reviews__item">
+            <div class="reviews__quote-mark" aria-hidden="true">“</div>
+            <p class="reviews__text">Получили, что хотели, спасибо! Команда не&nbsp;просто настроила инструменты, а&nbsp;разобралась в&nbsp;нашей логике и&nbsp;предложила удобные решения. Прозрачно и&nbsp;надёжно.</p>
+            <footer class="reviews__author">
+              <div class="reviews__avatar" aria-hidden="true">Д</div>
+              <div class="reviews__meta">
+                <span class="reviews__name">Дмитрий В.</span>
+                <span class="reviews__role">Руководитель, агентство недвижимости</span>
+              </div>
+            </footer>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section discuss" id="discuss">
+      <div class="container">
+        <div class="discuss__card">
+          <div class="discuss__bg" aria-hidden="true">
+            <img src="assets/img/gecko1.svg?v=blue-20260511-5" alt="">
+          </div>
+          <div class="discuss__content">
+            <span class="discuss__eyebrow">Готовы обсудить</span>
+            <h2 class="discuss__title">
+              Расскажите о&nbsp;своём проекте&nbsp;- ответим в&nbsp;течение рабочего дня
+            </h2>
+            <p class="discuss__text">Дадим оценку и&nbsp;конкретное предложение</p>
+            <a class="discuss__cta btn btn--primary btn--lg" href="#contact" data-modal-open="contact">
+              Напишите нам
+              <span class="discuss__cta-arrow" aria-hidden="true">></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <header class="faq__head">
+          <div class="faq__stickers" aria-hidden="true">
+            <span class="faq__sticker faq__sticker--why">ПОЧЕМУ</span>
+            <span class="faq__sticker faq__sticker--how">КАК</span>
+          </div>
+          <h2 class="faq__title">Вопросы, на которые сразу отвечаем</h2>
+        </header>
+
+        <div class="faq__list" data-faq-accordion>
+          <details class="faq__item">
+            <summary class="faq__summary">
+              <span class="faq__question">Почему мне не сделать сайт или приложение самому через AI-сервис</span>
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__body">
+              <div class="faq__body-inner">
+                <div class="faq__answer">
+                  <p>AI-сервисы - это не волшебная кнопка, а инструмент. Да, мощный, быстрый и полезный, но всё равно инструмент.</p>
+                  <p>В Геккодио мы используем AI и low-code решения как ускорители, а не как замену нормальной разработке. Если бизнесу нужен надёжный, понятный и масштабируемый продукт, важны не только генерация страниц или кода, но и архитектура, логика, UX, адаптивность, стабильность и дальнейшее развитие.</p>
+                  <p>AI может ускорить процесс, но именно человеческая экспертиза делает продукт рабочим. Мы объединяем оба подхода: технологии дают скорость, команда - качество и смысл.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__summary">
+              <span class="faq__question">Вы работаете только с low-code инструментами</span>
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__body">
+              <div class="faq__body-inner">
+                <div class="faq__answer">
+                  <p>Да, в основе нашего подхода - low-code и no-code инструменты, потому что они позволяют запускать решения быстрее, дешевле и без лишней технической сложности.</p>
+                  <p>Но это не означает шаблонность. Мы подбираем платформу под задачу, продумываем структуру, дизайн, логику работы, интеграции и возможность дальнейшего развития продукта. То есть используем low-code не как «конструктор ради конструктора», а как способ быстрее дать бизнесу рабочий результат.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__summary">
+              <span class="faq__question">Сколько человек работает в команде Геккодио</span>
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__body">
+              <div class="faq__body-inner">
+                <div class="faq__answer">
+                  <p>Мы небольшая и гибкая команда из трёх человек, которая закрывает ключевые направления: дизайн, веб-разработку, автоматизацию и управление проектом.</p>
+                  <p>При необходимости мы можем подключать проверенных специалистов под отдельные задачи: сложную разработку, интеграции, анимацию или дополнительный дизайн. Но для клиента процесс остаётся простым: есть понятная коммуникация, один ответственный контакт и прозрачное ведение проекта.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__summary">
+              <span class="faq__question">Сколько времени занимает разработка</span>
+              <span class="faq__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq__body">
+              <div class="faq__body-inner">
+                <div class="faq__answer">
+                  <p>Срок зависит от объёма проекта: количества страниц, сложности дизайна, наличия анимаций, интеграций, личного кабинета, форм, CRM и исходных материалов.</p>
+                  <ul class="faq__answer-list">
+                    <li><strong>Сайт с имеющимся дизайном</strong> - от 10-15 дней разработки.</li>
+                    <li><strong>Сайт с дизайном с нуля</strong> - от 3 недель: дизайн + разработка.</li>
+                    <li><strong>Лендинг или MVP на low-code / no-code</strong> - от 1-3 недель в зависимости от задачи.</li>
+                    <li><strong>Веб-приложение с личным кабинетом и кастомной логикой</strong> - от 1 месяца.</li>
+                    <li><strong>Сложный продукт с нуля</strong> - срок рассчитывается индивидуально, обычно от 2-3 месяцев.</li>
+                  </ul>
+                  <p>Точный срок можно определить после короткого брифа: что нужно сделать, какие функции важны и какие материалы уже готовы.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <div id="modal-slot"></div>
+
+  <script src="assets/js/partials.js?v=partials-20260511-blue-1"></script>
+  <script src="assets/js/header.js?v=dropdown-20260511-1"></script>
+  <script src="assets/js/modal.js?v=fix-20260512-1"></script>
+  <script src="assets/js/hero-rotator.js"></script>
+  <script src="assets/js/about-stack.js"></script>
+  <script src="assets/js/faq-accordion.js"></script>
+</body>
+</html>
+
+
+
+

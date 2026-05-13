@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Портфолио студии Геккодио - кейсы веб-сайтов, веб-приложений, автоматизаций и AI-интеграций для малого бизнеса и стартапов.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Портфолио - Геккодио</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Портфолио - Геккодио">
+  <meta property="og:description" content="Реальные проекты, которые мы запустили вместе с клиентами.">
+  <meta property="og:image" content="assets/img/logo.svg">
+
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+
+  <link rel="preload" href="assets/fonts/SuisseIntl-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-Medium.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-SemiBold.otf" as="font" type="font/otf" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css?v=blue-20260511-5">
+  <link rel="stylesheet" href="assets/css/base.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/header.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/modal.css?v=fix-20260512-1">
+  <link rel="stylesheet" href="assets/css/home-footer.css">
+  <link rel="stylesheet" href="assets/css/home-cta.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/home-cases.css?v=fix-20260512-7">
+  <link rel="stylesheet" href="assets/css/portfolio-page.css?v=final-20260512-4">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="portfolio-page">
+      <div class="container">
+        <header class="portfolio-page__head">
+          <h1 class="portfolio-page__title">Наши проекты</h1>
+          <p class="portfolio-page__lead">Подборка кейсов: что приходило в&nbsp;брифе, как решали и&nbsp;к&nbsp;какому результату пришли.</p>
+        </header>
+
+        <ul class="cases__list portfolio-page__cases" aria-label="Кейсы">
+          <li class="cases__item">
+            <div class="cases__col cases__col--brand">
+              <img
+                class="cases__logo"
+                src="assets/img/school lab logo.png"
+                alt="School Lab"
+                loading="lazy"
+              >
+              <div class="cases__brand-body">
+                <h2 class="cases__card-heading">Платформа онлайн обучения</h2>
+                <p class="cases__card-intro">
+                  Личный кабинет, тестирование и редактор материалов для команды онлайн-школы.
+                </p>
+              </div>
+            </div>
+            <div class="cases__col cases__col--body">
+              <h3 class="cases__body-title">Результат</h3>
+              <div class="cases__body-actions">
+                <a class="cases__pill" href="https://schoolab.ru/" target="_blank" rel="noopener noreferrer">
+                  Сайт <span class="cases__pill-icon" aria-hidden="true">↗</span>
+                </a>
+                <a class="cases__pill" href="cases/case-1.html">
+                  Кейс <span class="cases__pill-icon" aria-hidden="true">></span>
+                </a>
+              </div>
+              <p class="cases__body-text">
+                Собрали платформу с аттестацией учеников, тестами, редактором материалов и личными кабинетами.
+              </p>
+            </div>
+            <div class="cases__col cases__col--media">
+              <img
+                class="cases__photo"
+                src="assets/img/school lab photo.png"
+                alt="Интерфейс и визуал проекта School Lab"
+                loading="lazy"
+              >
+            </div>
+          </li>
+
+          <li class="cases__item">
+            <div class="cases__col cases__col--brand">
+              <p class="cases__brand-name">Verbatica</p>
+              <div class="cases__brand-body">
+                <h2 class="cases__card-heading">Интерпритатор аэрокосмической документации</h2>
+                <p class="cases__card-intro">
+                  AI-инструмент для перевода, проверки терминов и работы с техническим глоссарием.
+                </p>
+              </div>
+            </div>
+            <div class="cases__col cases__col--body">
+              <h3 class="cases__body-title">Результат</h3>
+              <div class="cases__body-actions">
+                <a class="cases__pill" href="https://translate.verbatica.ai/" target="_blank" rel="noopener noreferrer">
+                  Сайт <span class="cases__pill-icon" aria-hidden="true">↗</span>
+                </a>
+                <a class="cases__pill" href="cases/case-2.html">
+                  Кейс <span class="cases__pill-icon" aria-hidden="true">></span>
+                </a>
+              </div>
+              <p class="cases__body-text">
+                Собрали переводчик для Verbatica за 2 недели: интерфейс, глоссарий в Sheets и связку с OpenAI.
+              </p>
+            </div>
+            <div class="cases__col cases__col--media portfolio-page__case-visual portfolio-page__case-visual--automation">
+              <img
+                class="cases__photo"
+                src="assets/img/case обложка verbatica.png?v=20260512-1"
+                alt="Интерфейс переводчика Verbatica"
+                loading="lazy"
+              >
+            </div>
+          </li>
+
+          <li class="cases__item">
+            <div class="cases__col cases__col--brand">
+              <p class="cases__brand-name">Panteon</p>
+              <div class="cases__brand-body">
+                <h2 class="cases__card-heading">Переводчик католических Месс</h2>
+                <p class="cases__card-intro">
+                  Панель для перевода, подготовки изображений и публикации чтений для Panteon.
+                </p>
+              </div>
+            </div>
+            <div class="cases__col cases__col--body">
+              <h3 class="cases__body-title">Результат</h3>
+              <div class="cases__body-actions">
+                <a class="cases__pill" href="https://italian-lingua-fluent.lovable.app/" target="_blank" rel="noopener noreferrer">
+                  Сайт <span class="cases__pill-icon" aria-hidden="true">↗</span>
+                </a>
+                <a class="cases__pill" href="cases/case-3.html">
+                  Кейс <span class="cases__pill-icon" aria-hidden="true">></span>
+                </a>
+              </div>
+              <p class="cases__body-text">
+                Собрали рабочий сервис за 3 дня: ввод текстов, изображения, AI-помощь и база материалов.
+              </p>
+            </div>
+            <div class="cases__col cases__col--media portfolio-page__case-visual portfolio-page__case-visual--ai">
+              <img
+                class="cases__photo"
+                src="assets/img/case обложка lingua.png?v=20260512-1"
+                alt="Интерфейс переводчика богослужебных чтений"
+                loading="lazy"
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="service-cta-block">
+      <div class="container">
+        <div class="discuss__card">
+          <div class="discuss__bg" aria-hidden="true"><img src="assets/img/gecko1.svg?v=blue-20260511-5" alt=""></div>
+          <div class="discuss__content">
+            <span class="discuss__eyebrow">Готовы обсудить</span>
+            <h2 class="discuss__title">Хотим, чтобы ваш проект тоже здесь оказался</h2>
+            <p class="discuss__text">Расскажите о&nbsp;задаче&nbsp;– подберём подход и&nbsp;дадим точную оценку.</p>
+            <a class="discuss__cta btn btn--primary btn--lg" href="#contact" data-modal-open="contact">Оставить заявку <span class="discuss__cta-arrow" aria-hidden="true">></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <div id="modal-slot"></div>
+
+  <script src="assets/js/partials.js?v=partials-20260511-blue-1"></script>
+  <script src="assets/js/header.js?v=dropdown-20260511-1"></script>
+  <script src="assets/js/modal.js?v=fix-20260512-1"></script>
+</body>
+</html>
+
+
+
+

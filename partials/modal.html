@@ -1,0 +1,105 @@
+<div class="modal" data-modal hidden aria-hidden="true">
+  <div class="modal__overlay" data-modal-close></div>
+
+  <div
+    class="modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+    <button
+      type="button"
+      class="modal__close"
+      data-modal-close
+      aria-label="Закрыть"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6 6 18"/>
+      </svg>
+    </button>
+
+    <div class="modal__content">
+      <header class="modal__header">
+        <h2 class="modal__title" id="modal-title">Расскажите о&nbsp;своём проекте</h2>
+      </header>
+
+      <form class="modal__form" data-modal-form novalidate>
+        <div class="modal__field">
+          <label class="modal__label modal__label--required" for="modal-name">Имя</label>
+          <input
+            class="modal__input"
+            type="text"
+            id="modal-name"
+            name="name"
+            required
+            autocomplete="name"
+            placeholder="Как к вам обращаться"
+          >
+        </div>
+
+        <div class="modal__field">
+          <label class="modal__label modal__label--required" for="modal-phone">Телефон</label>
+          <input
+            class="modal__input"
+            type="tel"
+            id="modal-phone"
+            name="phone"
+            required
+            autocomplete="tel"
+            inputmode="tel"
+            placeholder="+7 999 999 99 99"
+          >
+        </div>
+
+        <div class="modal__field">
+          <label class="modal__label modal__label--required" for="modal-email">Email</label>
+          <input
+            class="modal__input"
+            type="email"
+            id="modal-email"
+            name="email"
+            required
+            autocomplete="email"
+            inputmode="email"
+            placeholder="example@mail.com"
+          >
+        </div>
+
+        <div class="modal__field">
+          <label class="modal__label modal__label--required" for="modal-message">Что нужно сделать</label>
+          <textarea
+            class="modal__input modal__textarea"
+            id="modal-message"
+            name="message"
+            required
+            rows="4"
+            placeholder="Коротко опишите задачу, сроки и ссылки на референсы"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="modal__submit btn btn--primary btn--lg">
+          <span class="modal__submit-text">Отправить</span>
+          <span class="modal__submit-loader" aria-hidden="true"></span>
+        </button>
+
+        <p class="modal__hint">Ответим лично, обычно в&nbsp;течение рабочего дня</p>
+      </form>
+
+      <div class="modal__success" data-modal-success hidden>
+        <div class="modal__success-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="32" cy="32" r="28"/>
+            <path d="m20 32 8 8 16-18"/>
+          </svg>
+        </div>
+        <h3 class="modal__success-title">Заявка отправлена</h3>
+        <p class="modal__success-text">Спасибо!<br>Мы получили ваше сообщение и&nbsp;скоро свяжемся.</p>
+        <button type="button" class="modal__success-close btn" data-modal-close>Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

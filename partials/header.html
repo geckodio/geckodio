@@ -1,0 +1,205 @@
+<header class="header" data-header>
+  <div class="header__inner container">
+    <a href="index.html" class="header__logo" aria-label="Геккодио - на главную">
+      <img src="assets/img/new%20logo.svg?v=blue-20260511-5" alt="Геккодио" class="header__logo-icon" width="171" height="44">
+    </a>
+
+    <nav class="header__nav" aria-label="Основная навигация">
+      <div class="header__nav-item" data-dropdown="services">
+        <button
+          type="button"
+          class="header__nav-link"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="dropdown-services"
+          data-dropdown-trigger="services"
+        >
+          Услуги
+          <span class="header__caret" aria-hidden="true"></span>
+        </button>
+
+        <div
+          class="header__dropdown header__dropdown--services"
+          id="dropdown-services"
+          data-dropdown-panel="services"
+          role="menu"
+          hidden
+        >
+          <a class="header__dropdown-link" role="menuitem" href="services/websites.html">
+            <span class="header__dropdown-link-title">Разработка веб-сайтов</span>
+            <span class="header__dropdown-link-text">Презентационные сайты, лендинги и&nbsp;корпоративные страницы. Помогаем быстро упаковать продукт, услугу или&nbsp;компанию в&nbsp;понятный веб-формат.</span>
+          </a>
+          <a class="header__dropdown-link" role="menuitem" href="services/web-apps.html">
+            <span class="header__dropdown-link-title">Разработка веб-приложений</span>
+            <span class="header__dropdown-link-text">Личные кабинеты, внутренние системы и&nbsp;клиентские сервисы. Проектируем интерфейсы, которыми удобно пользоваться каждый день.</span>
+          </a>
+          <a class="header__dropdown-link" role="menuitem" href="services/branding-ui.html">
+            <span class="header__dropdown-link-title">Фирменный стиль и UI/UX</span>
+            <span class="header__dropdown-link-text">Бренд, идентика, дизайн интерфейсов и&nbsp;сценариев. Собираем визуальную систему, которая выглядит цельно на&nbsp;сайте, в&nbsp;продукте и&nbsp;коммуникациях.</span>
+          </a>
+          <a class="header__dropdown-link" role="menuitem" href="services/automation.html">
+            <span class="header__dropdown-link-title">Автоматизация</span>
+            <span class="header__dropdown-link-text">Автоматизация рутины и&nbsp;бизнес-процессов компании. Настраиваем связки, которые экономят время команды и&nbsp;снижают количество ручной работы.</span>
+          </a>
+          <a class="header__dropdown-link" role="menuitem" href="services/ai-integrations.html">
+            <span class="header__dropdown-link-title">Интеграции и нейросети</span>
+            <span class="header__dropdown-link-text">CRM, базы данных, мессенджеры и&nbsp;AI-инструменты. Соединяем сервисы в&nbsp;единую логику, чтобы данные не&nbsp;терялись между системами.</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header__nav-item">
+        <a href="portfolio.html" class="header__nav-link">Портфолио</a>
+      </div>
+
+      <div class="header__nav-item" data-dropdown="menu">
+        <button
+          type="button"
+          class="header__nav-link"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="dropdown-menu"
+          data-dropdown-trigger="menu"
+        >
+          Меню
+          <span class="header__caret" aria-hidden="true"></span>
+        </button>
+
+        <div
+          class="header__dropdown header__dropdown--menu"
+          id="dropdown-menu"
+          data-dropdown-panel="menu"
+          role="menu"
+          hidden
+        >
+          <div class="header__dropdown-cols">
+            <div class="header__dropdown-col">
+              <a class="header__dropdown-link" role="menuitem" href="about.html">
+                <span class="header__dropdown-link-title">О нас</span>
+                <span class="header__dropdown-link-text">Команда, миссия и&nbsp;ценности студии.</span>
+              </a>
+              <a class="header__dropdown-link" role="menuitem" href="startups.html">
+                <span class="header__dropdown-link-title">Для стартапов</span>
+                <span class="header__dropdown-link-text">MVP за&nbsp;4 недели и&nbsp;спецпредложение для&nbsp;запуска.</span>
+              </a>
+              <a class="header__dropdown-link" role="menuitem" href="pricing.html">
+                <span class="header__dropdown-link-title">Расценки</span>
+                <span class="header__dropdown-link-text">Показываем, из&nbsp;чего складывается цена и&nbsp;какой формат подойдёт под вас.</span>
+              </a>
+            </div>
+
+            <div class="header__dropdown-socials">
+              <div class="header__dropdown-socials-media" aria-hidden="true">
+                <img src="assets/img/new_vk.png" alt="" loading="lazy">
+              </div>
+              <span class="header__dropdown-socials-title">Следите за нами</span>
+              <p class="header__dropdown-socials-text">Кейсы, процессы, разборы инструментов и&nbsp;новости студии</p>
+              <div class="header__dropdown-socials-icons">
+                <a class="header__dropdown-social" href="https://t.me/geckodio" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                  <img src="assets/img/tg_footer.svg" alt="">
+                </a>
+                <a class="header__dropdown-social" href="https://vk.com/geckodio" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+                  <img src="assets/img/vk_footer.svg" alt="">
+                </a>
+                <a class="header__dropdown-social" href="https://dzen.ru/geckodio" target="_blank" rel="noopener noreferrer" aria-label="Дзен">
+                  <img src="assets/img/dzen_footer.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <a
+      href="#contact"
+      class="btn btn--primary header__cta"
+      data-modal-open="contact"
+    >
+      Напишите нам
+    </a>
+
+    <button
+      type="button"
+      class="header__burger"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      data-burger
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="header__dropdown-overlay" data-dropdown-overlay aria-hidden="true"></div>
+
+  <div class="header__mobile-panel" data-mobile-panel>
+    <nav class="header__mobile-nav" aria-label="Мобильная навигация">
+      <div class="header__mobile-group" data-mobile-group="services">
+        <button
+          type="button"
+          class="header__nav-link header__mobile-toggle"
+          aria-expanded="false"
+          data-mobile-toggle
+        >
+          Услуги
+          <span class="header__caret" aria-hidden="true"></span>
+        </button>
+        <div class="header__mobile-sub" hidden>
+          <a class="header__mobile-sublink" href="services/websites.html">Разработка веб-сайтов</a>
+          <a class="header__mobile-sublink" href="services/web-apps.html">Разработка веб-приложений</a>
+          <a class="header__mobile-sublink" href="services/branding-ui.html">Фирменный стиль и UI/UX</a>
+          <a class="header__mobile-sublink" href="services/automation.html">Автоматизация</a>
+          <a class="header__mobile-sublink" href="services/ai-integrations.html">Интеграции и нейросети</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html" class="header__nav-link">Портфолио</a>
+
+      <div class="header__mobile-group" data-mobile-group="menu">
+        <button
+          type="button"
+          class="header__nav-link header__mobile-toggle"
+          aria-expanded="false"
+          data-mobile-toggle
+        >
+          Меню
+          <span class="header__caret" aria-hidden="true"></span>
+        </button>
+        <div class="header__mobile-sub" hidden>
+          <a class="header__mobile-sublink" href="about.html">О нас</a>
+          <a class="header__mobile-sublink" href="startups.html">Для стартапов</a>
+          <a class="header__mobile-sublink" href="pricing.html">Расценки</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header__mobile-socials">
+      <span class="header__mobile-socials-title">Следите за нами</span>
+      <div class="header__mobile-socials-icons">
+        <a class="header__dropdown-social" href="https://t.me/geckodio" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <img src="assets/img/tg_footer.svg" alt="">
+        </a>
+        <a class="header__dropdown-social" href="https://vk.com/geckodio" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+          <img src="assets/img/vk_footer.svg" alt="">
+        </a>
+        <a class="header__dropdown-social" href="https://dzen.ru/geckodio" target="_blank" rel="noopener noreferrer" aria-label="Дзен">
+          <img src="assets/img/dzen_footer.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <a
+      href="#contact"
+      class="btn btn--primary btn--lg header__mobile-cta"
+      data-modal-open="contact"
+    >
+      Напишите нам
+    </a>
+  </div>
+</header>
+
+
+
+

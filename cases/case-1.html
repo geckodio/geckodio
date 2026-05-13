@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="School Lab — прототип платформы на Bubble: преподаватели и ученики, личные кабинеты, расписание, оплата и учёт занятий. Кейс студии Геккодио.">
+  <meta name="theme-color" content="#ffffff">
+  <title>School Lab - кейс Геккодио</title>
+  <base href="../">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="School Lab - кейс Геккодио">
+  <meta property="og:description" content="Прототип платформы для онлайн-занятий: личные кабинеты, срочные заявки, оплата и учёт минут.">
+  <meta property="og:image" content="assets/img/school lab photo.png">
+
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/SuisseIntl-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-Medium.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/SuisseIntl-SemiBold.otf" as="font" type="font/otf" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css?v=blue-20260511-5">
+  <link rel="stylesheet" href="assets/css/base.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/header.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/modal.css?v=fix-20260512-1">
+  <link rel="stylesheet" href="assets/css/home-footer.css">
+  <link rel="stylesheet" href="assets/css/home-cta.css?v=fix-20260511-5">
+  <link rel="stylesheet" href="assets/css/case-page.css?v=final-20260512-4">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <article class="case-page">
+      <div class="container">
+        <nav class="case-page__breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a>
+          <span class="case-page__breadcrumbs-separator">/</span>
+          <a href="portfolio.html">Проекты</a>
+          <span class="case-page__breadcrumbs-separator">/</span>
+          <span>School Lab</span>
+        </nav>
+
+        <header class="case-page__head">
+          <div class="case-page__head-info">
+            <h1 class="case-page__title">School Lab</h1>
+            <p class="case-page__subtitle">Веб-приложение, где преподаватели и ученики встречаются в одной цифровой среде: личные кабинеты, расписание и занятия с записью, чаты, абонементы по минутам, оплата и автоматический учёт занятий.</p>
+          </div>
+
+          <div class="case-page__meta">
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Клиент</span><span class="case-page__meta-value">School Lab</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Срок</span><span class="case-page__meta-value">4 недели</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Год</span><span class="case-page__meta-value">2024</span></div>
+            <div class="case-page__meta-item"><span class="case-page__meta-label">Стек</span><span class="case-page__meta-value">Bubble · Figma</span></div>
+          </div>
+        </header>
+
+        <div class="case-page__cover">
+          <img src="assets/img/school lab photo.png" alt="Интерфейс School Lab">
+        </div>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Задача</h2>
+            <div class="case-section__body">
+              <p><strong>School Lab</strong>&nbsp;&mdash; on-demand образовательный сервис для школьников. Нужно было создать платформу, где проходит связь с&nbsp;учеником и&nbsp;учителем. У&nbsp;каждой роли&nbsp;&mdash; расписание, чат и&nbsp;история уроков.</p>
+              <p>Также нужно было реализовать срочный поиск преподавателя: админ принимает обращение ученика, на&nbsp;платформе выбирает предмет и&nbsp;класс, видит свободных преподавателей, отправляет им уведомление; кто первым подтвердил&nbsp;&mdash; ведёт урок, после чего формируется ссылка на&nbsp;конференцию. Параллельно&nbsp;&mdash; оплату на&nbsp;сайте с&nbsp;корректным начислением купленных минут, а&nbsp;также выгрузку и&nbsp;загрузку данных о&nbsp;проведённых занятиях с&nbsp;внешней платформы (ФИО, дата и&nbsp;время, длительность) для расчётов с&nbsp;преподавателями и&nbsp;списания минут у&nbsp;учеников.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Решение</h2>
+            <div class="case-section__body">
+              <p>Для реализации оказалось достаточно <strong>Bubble</strong>: конструктор позволяет провести все интеграции и&nbsp;имеет встроенную базу данных.</p>
+              <ul>
+                <li>Роли и&nbsp;доступы: ученик, преподаватель, администратор</li>
+                <li>Срочная заявка на&nbsp;урок: выбор предмета и&nbsp;класса, список свободных преподавателей, рассылка уведомлений, подтверждение; ссылку на&nbsp;конференцию преподавателю и&nbsp;ученику присылает администратор</li>
+                <li>ЛК преподавателя: расписание в&nbsp;часы работы, статус «свободен&nbsp;/ на&nbsp;уроке», история занятий с&nbsp;возможностью приложить ссылку на&nbsp;запись с&nbsp;внешней площадки; редактирование профиля, поддержка</li>
+                <li>ЛК ученика: чаты с&nbsp;преподавателями, расписание, история занятий, детализация по&nbsp;минутам (куплено&nbsp;/ потрачено&nbsp;/ остаток); к&nbsp;заданию можно прикрепить фотографии; редактирование профиля, ввод способа оплаты, поддержка</li>
+                <li>Интеграция оплаты на&nbsp;сайте и&nbsp;начисление купленных минут</li>
+                <li>Импорт данных о&nbsp;проведённых занятиях с&nbsp;сторонней платформы для сверки длительности, списания минут и&nbsp;расчётов с&nbsp;преподавателями</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <figure class="case-page__inline-image">
+          <img src="assets/img/school-lab-detail.png" alt="Детальный экран проекта School Lab">
+        </figure>
+
+        <section class="case-section">
+          <div class="case-section__layout">
+            <h2 class="case-section__title">Результат</h2>
+            <div class="case-section__body">
+              <p>За&nbsp;4&nbsp;недели реализовали проект и вывели веб-приложение в&nbsp;работу: компания проверила все сценарии, функции ролей и&nbsp;оплаты и&nbsp;смогла продвинуться дальше, наращивая аудиторию на&nbsp;собственной платформе без отдельной dev-команды на&nbsp;старте.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-page__footer-actions">
+          <a class="btn btn--primary" href="https://schoolab.ru/" target="_blank" rel="noopener noreferrer">Перейти на сайт ↗</a>
+          <a class="btn btn--ghost" href="portfolio.html">К другим проектам</a>
+        </div>
+
+        <section class="case-page__cta">
+          <div class="discuss__card">
+            <div class="discuss__bg" aria-hidden="true"><img src="assets/img/gecko1.svg?v=blue-20260511-5" alt=""></div>
+            <div class="discuss__content">
+              <span class="discuss__eyebrow">Похожая задача</span>
+              <h2 class="discuss__title">Сделаем продукт под ваш бизнес так же быстро</h2>
+              <p class="discuss__text">Расскажите, что нужно - оценим в течение рабочего дня.</p>
+              <a class="discuss__cta btn btn--primary btn--lg" href="#contact" data-modal-open="contact">Оставить заявку <span class="discuss__cta-arrow" aria-hidden="true">></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <div id="footer-slot"></div>
+  <div id="modal-slot"></div>
+
+  <script src="assets/js/partials.js?v=partials-20260511-blue-1"></script>
+  <script src="assets/js/header.js?v=dropdown-20260511-1"></script>
+  <script src="assets/js/modal.js?v=fix-20260512-1"></script>
+  <script src="assets/js/case-lightbox.js?v=case-refresh-20260511-1"></script>
+</body>
+</html>
+
+
+
+
