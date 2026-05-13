@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background-color: var(--color-page);
+  min-height: 100dvh;
+  padding-top: var(--header-height);
+  overflow-x: clip;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: pretty;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.btn {
+  --btn-bg: transparent;
+  --btn-color: var(--color-text);
+  --btn-border: transparent;
+  --btn-hover-bg: #d6fda6;
+  --btn-hover-color: var(--color-text);
+  --btn-hover-border: #9ed46c;
+  --btn-active-bg: #b7e47b;
+  --btn-active-color: var(--color-text);
+  --btn-active-border: #8fbe60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  font-family: inherit;
+  font-size: var(--fs-16);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  padding: 14px 24px;
+  border: 1px solid var(--btn-border);
+  border-radius: 10px;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  transition: background-color var(--transition-base),
+    color var(--transition-base), border-color var(--transition-base),
+    transform var(--transition-fast), box-shadow var(--transition-base);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-bg);
+  border-color: var(--btn-hover-border);
+  color: var(--btn-hover-color);
+}
+
+.btn:active {
+  background-color: var(--btn-active-bg);
+  border-color: var(--btn-active-border);
+  color: var(--btn-active-color);
+  transform: none;
+}
+
+.btn--primary {
+  --btn-bg: #d6fda6;
+  --btn-color: var(--color-text);
+  --btn-border: #d6fda6;
+  --btn-hover-bg: #c8f291;
+  --btn-hover-color: var(--color-text);
+  --btn-hover-border: #c8f291;
+  --btn-active-bg: #b7e47b;
+  --btn-active-color: var(--color-text);
+  --btn-active-border: #b7e47b;
+}
+
+.btn--ghost {
+  --btn-bg: #ffffff;
+  --btn-color: var(--color-text);
+  --btn-border: var(--color-border-strong);
+  --btn-hover-bg: #d6fda6;
+  --btn-hover-color: var(--color-text);
+  --btn-hover-border: #9ed46c;
+  --btn-active-bg: #b7e47b;
+  --btn-active-color: var(--color-text);
+  --btn-active-border: #8fbe60;
+}
+
+.btn--lg {
+  font-size: var(--fs-18);
+  padding: 18px 32px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

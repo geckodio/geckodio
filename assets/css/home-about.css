@@ -1,0 +1,468 @@
+﻿.about {
+  /* Light-theme tokens scoped to the About section */
+  --about-bg: #f7f8fa;
+  --about-surface: #ffffff;
+  --about-text: #1f2430;
+  --about-lead: #4d5566;
+  --about-text-muted: #667085;
+  --about-border-soft: rgba(46, 55, 229, 0.32);
+  --about-border-active: #2E37E5;
+  --about-icon-bg: rgba(46, 55, 229, 0.14);
+  --about-icon-color: #2E37E5;
+  --about-glow: rgba(46, 55, 229, 0.24);
+  --about-glow-fade: rgba(46, 55, 229, 0);
+  --about-icon-hover-text: #1f2430;
+
+  background-color: rgba(247, 248, 250, 1);
+  color: var(--about-text);
+  padding-block: 90px;
+}
+
+/* ── Title row + stacked stickers ─────────────────────────── */
+
+.about__title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 42px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--about-text);
+  text-align: left;
+  margin-bottom: var(--space-64);
+}
+
+.about__title-accent {
+  display: inline-block;
+  padding: 0 0.08em;
+  color: var(--about-text);
+}
+
+.about__stickers {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0;
+}
+
+.about__sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 0 rgba(30, 30, 30, 0.06);
+  line-height: 1;
+}
+
+.about__sticker--result {
+  position: relative;
+  z-index: 2;
+  background-color: #f9d6df;
+  color: var(--color-text);
+  transform: rotate(7deg);
+}
+
+.about__sticker--fast {
+  position: relative;
+  z-index: 1;
+  margin-top: 3px;
+  margin-left: -10px;
+  background-color: #d6fda6;
+  color: var(--color-text);
+  transform: rotate(-7deg);
+}
+
+/* ── Body: lead left, cards right ────────────────────────── */
+
+.about__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.about__lead-col {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-32));
+  padding-bottom: 110px;
+}
+
+.about__lead-col .section__lead {
+  width: 100%;
+  max-width: 100%;
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: rgba(107, 107, 107, 1);
+}
+
+@media (min-width: 960px) {
+  .about__lead-col .section__lead {
+    font-size: var(--fs-18);
+    line-height: 1.55;
+  }
+
+  .about__cards-col {
+    flex: 0 0 437px;
+    max-width: 437px;
+    margin-left: auto;
+  }
+
+  .about__stack-wrap {
+    width: 437px;
+    margin-left: auto;
+  }
+}
+
+/* ── Decorative gecko footprints under the lead text ─────── */
+
+.about__footprints {
+  --footprints-overflow: 72px;
+  position: absolute;
+  top: calc(100% - 64px);
+  left: calc(-1 * (var(--container-padding) + var(--footprints-overflow)));
+  display: block;
+  width: calc(100% + var(--container-padding) + var(--footprints-overflow));
+  margin: 0;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about__cards-col {
+  flex: 0 0 465px;
+  /* Push cards to the right edge after lead fills its max-width */
+  margin-left: auto;
+}
+
+/* ── Stack wrapper - 16:9 via padding-top trick ──────────── */
+
+.about__stack-wrap {
+  --peek: 38px;
+  --fade: 70px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  /* 9/16 = 56.25% for card itself, plus peek top + bottom */
+  padding-top: calc(56.25% + var(--peek) * 2);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 var(--fade),
+    #000 calc(100% - var(--fade)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 var(--fade),
+    #000 calc(100% - var(--fade)),
+    transparent 100%
+  );
+}
+
+.about__stack {
+  position: absolute;
+  inset: 0;
+}
+
+/* ── Cards ───────────────────────────────────────────────── */
+
+.about__card {
+  position: absolute;
+  /* Card occupies wrapper minus peek margins on top & bottom → 16:9 of column width */
+  top: var(--peek);
+  left: 0;
+  right: 0;
+  bottom: var(--peek);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-24);
+  padding: var(--space-32);
+  background-color: var(--about-surface);
+  border: 1.5px solid var(--about-border-soft);
+  border-radius: var(--radius-lg);
+  transition:
+    transform 0.45s var(--ease-base),
+    border-color 0.35s var(--ease-base),
+    box-shadow 0.35s var(--ease-base),
+    opacity 0.3s var(--ease-base);
+  will-change: transform;
+  user-select: none;
+  isolation: isolate;
+}
+
+.about__card::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -50% -50%;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(
+    circle,
+    var(--about-glow) 0%,
+    var(--about-glow-fade) 70%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Alternating accent colors: odd cards = blue (default), even = lime */
+.about__card:nth-child(even) {
+  --about-border-soft: rgba(170, 255, 63, 0.35);
+  --about-border-active: #aaff3f;
+  --about-icon-bg: rgba(170, 255, 63, 0.18);
+  --about-icon-color: #aaff3f;
+  --about-glow: rgba(170, 255, 63, 0.2);
+  --about-glow-fade: rgba(170, 255, 63, 0);
+  --about-icon-hover-text: #1e1e1e;
+}
+
+/* Active card */
+.about__card[data-stack-pos="0"] {
+  z-index: 10;
+  transform: none;
+  border-color: var(--about-border-active);
+  box-shadow: 0 8px 24px rgba(31, 36, 48, 0.12);
+  cursor: pointer;
+}
+
+.about__card[data-stack-pos="0"]:hover::before {
+  opacity: 1;
+}
+
+
+/* Previous card - peeks above active (translateY(-100%) moves it up by its own height) */
+.about__card[data-stack-pos="-1"] {
+  z-index: 9;
+  transform: translateY(-100%) scale(0.92);
+  border-color: rgba(46, 55, 229, 0.5);
+  border-width: 2px;
+  box-shadow: 0 6px 18px rgba(31, 36, 48, 0.1);
+  cursor: pointer;
+}
+
+/* Next card - peeks below active */
+.about__card[data-stack-pos="1"] {
+  z-index: 8;
+  transform: translateY(100%) scale(0.92);
+  border-color: rgba(46, 55, 229, 0.5);
+  border-width: 2px;
+  box-shadow: 0 6px 18px rgba(31, 36, 48, 0.1);
+  cursor: pointer;
+}
+
+/* Hidden cards - pre-positioned and invisible, no transform transition */
+.about__card[data-stack-pos="hidden-prev"],
+.about__card[data-stack-pos="hidden-next"] {
+  z-index: 7;
+  opacity: 0;
+  pointer-events: none;
+  /* Only animate opacity, snap transform instantly so no mid-air glitch */
+  transition: opacity 0.3s var(--ease-base);
+}
+
+.about__card[data-stack-pos="hidden-prev"] {
+  transform: translateY(-100%) scale(0.92);
+}
+
+.about__card[data-stack-pos="hidden-next"] {
+  transform: translateY(100%) scale(0.92);
+}
+
+/* ── Card content ────────────────────────────────────────── */
+
+.about__card-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.about__card-icon {
+  flex: 0 0 auto;
+  width: 90px;
+  height: 90px;
+  margin-right: -57px;
+  color: var(--about-text-muted);
+  pointer-events: none;
+  transition: color var(--transition-base);
+}
+
+.about__card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about__card[data-stack-pos="0"]:hover .about__card-icon {
+  color: var(--about-icon-color);
+}
+
+.about__card-title {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+  color: var(--about-text);
+}
+
+.about__card-text {
+  font-size: var(--fs-16);
+  line-height: var(--lh-relaxed);
+  color: var(--about-text-muted);
+}
+
+/* ── Tablet / mobile ≤960px - column layout & content-sized cards ─── */
+
+@media (max-width: 960px) {
+  .about__title {
+    font-size: 32px;
+    margin-bottom: var(--space-40);
+  }
+
+  .about__body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-32);
+  }
+
+  .about__lead-col,
+  .about__cards-col {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    position: static;
+  }
+
+  .about__footprints {
+    display: none;
+  }
+
+  /* Stack wrap becomes content-sized: height = tallest card + peek top/bottom */
+  .about__stack-wrap {
+    --peek: 32px;
+    --fade: 56px;
+    height: auto;
+    padding-top: 0;
+    padding-block: var(--peek);
+  }
+
+  .about__stack {
+    position: relative;
+    inset: auto;
+    display: grid;
+  }
+
+  /* All cards share one grid cell; tallest card defines the row height */
+  .about__card {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    grid-column: 1;
+    grid-row: 1;
+    height: auto;
+    min-height: 0;
+  }
+}
+
+/* ── Small tablet ≤800px ─────────────────────────────────── */
+
+@media (max-width: 800px) {
+  .about__title {
+    font-size: 30px;
+    margin-bottom: var(--space-32);
+  }
+}
+
+/* ── Mobile ≤578px ───────────────────────────────────────── */
+
+@media (max-width: 578px) {
+  .about__title {
+    font-size: 28px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 0;
+  }
+
+  .about__title-accent {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .about__stickers {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: var(--space-8);
+    margin-left: 0;
+    margin-bottom: var(--space-24);
+  }
+
+  .about__sticker--result {
+    transform: rotate(-7deg);
+  }
+
+  .about__sticker--fast {
+    margin-top: 0;
+    margin-left: 0;
+    transform: rotate(7deg);
+  }
+
+  .about__stack-wrap {
+    --peek: 28px;
+    --fade: 48px;
+  }
+
+  .about__card {
+    padding: var(--space-24);
+    gap: var(--space-12);
+  }
+
+  .about__card-content {
+    gap: var(--space-12);
+  }
+
+  .about__card-icon {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (min-width: 960px) {
+  .about__cards-col {
+    flex: 0 0 437px;
+    max-width: 437px;
+    margin-left: auto;
+  }
+
+  .about__stack-wrap {
+    width: 437px;
+    margin-left: auto;
+  }
+}

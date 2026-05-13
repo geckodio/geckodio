@@ -1,0 +1,538 @@
+﻿.cases {
+  background-color: var(--color-page);
+  color: var(--color-text);
+}
+
+.cases__head {
+  max-width: 720px;
+  margin-bottom: var(--space-48);
+}
+
+.cases__title {
+  font-size: clamp(1.75rem, 4vw, 2.625rem);
+  font-weight: var(--fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0 0 var(--space-20);
+}
+
+.cases__lead {
+  margin: 0;
+  max-width: 480px;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: var(--lh-relaxed);
+  color: rgba(107, 107, 107, 1);
+  font-weight: 400;
+}
+
+.cases__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+  container-type: inline-size;
+  container-name: cases-list;
+}
+
+@media (min-width: 1025px) {
+  .cases__list:not(.portfolio-page__cases) > .cases__item {
+    min-height: 350px;
+    height: 350px;
+  }
+}
+
+.cases__portfolio {
+  margin-top: 64px;
+  --btn-bg: #1e1e1e;
+  --btn-color: #ffffff;
+  --btn-border: #1e1e1e;
+  --btn-hover-bg: #111111;
+  --btn-hover-color: var(--color-accent-lime);
+  --btn-hover-border: #111111;
+  --btn-active-bg: #050505;
+  --btn-active-color: #b7e47b;
+  --btn-active-border: #050505;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-radius: 10px;
+  width: fit-content;
+  min-width: 0;
+  min-height: 56px;
+  padding: 14px 21px;
+}
+
+.cases__portfolio:hover {
+  background-color: #111111;
+  color: var(--color-accent-lime);
+}
+
+.cases__portfolio:active {
+  background-color: #050505;
+  color: #b7e47b;
+}
+
+.cases__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  --cases-overlap: clamp(20px, 3.5vw, 36px);
+  --cases-brand-w: 432px;
+  --cases-body-w: 430px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  min-height: 0;
+  overflow: visible;
+  background: transparent;
+  isolation: isolate;
+}
+
+.cases__col {
+  position: relative;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 28px rgba(30, 30, 30, 0.12);
+}
+
+.cases__col--brand {
+  flex: 0 0 var(--cases-brand-w);
+  width: var(--cases-brand-w);
+  max-width: var(--cases-brand-w);
+  min-width: var(--cases-brand-w);
+  box-sizing: border-box;
+  z-index: 3;
+  margin-right: calc(-1 * var(--cases-overlap));
+  background-color: rgba(231, 231, 231, 1);
+  color: rgba(30, 30, 30, 1);
+  padding: var(--space-24) var(--space-24) var(--space-24);
+  padding-top: clamp(52px, 8vw, 72px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(var(--space-12), 2vw, var(--space-24));
+}
+
+.cases__logo {
+  position: absolute;
+  top: var(--space-16);
+  left: var(--space-16);
+  width: auto;
+  max-width: min(200px, 88%);
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cases__brand-name {
+  position: absolute;
+  top: var(--space-24);
+  left: var(--space-24);
+  right: var(--space-24);
+  margin: 0;
+  max-width: none;
+  font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+  font-weight: var(--fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: rgba(30, 30, 30, 1);
+  pointer-events: none;
+  user-select: none;
+  overflow-wrap: break-word;
+}
+
+/* Второй кейс на главной — Verbatica (список без portfolio-page__cases) */
+.cases__list:not(.portfolio-page__cases) > .cases__item:nth-child(2) .cases__col--brand {
+  background-color: #8859ce;
+}
+
+.cases__list:not(.portfolio-page__cases) > .cases__item:nth-child(2) .cases__col--brand .cases__card-heading,
+.cases__list:not(.portfolio-page__cases) > .cases__item:nth-child(2) .cases__col--brand .cases__card-intro {
+  color: #ffffff;
+}
+
+.cases__list:not(.portfolio-page__cases) > .cases__item:nth-child(2) .cases__brand-name {
+  color: #ffffff;
+}
+
+.cases__brand-body {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(var(--space-8), 1.5vw, var(--space-16));
+}
+
+.cases__card-heading {
+  margin: 0;
+  font-size: clamp(1.0625rem, 2.2vw, 1.375rem);
+  font-weight: var(--fw-medium);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: #1e1e1e;
+}
+
+.cases__col--brand .cases__card-heading {
+  color: rgba(30, 30, 30, 1);
+}
+
+.cases__card-intro {
+  margin: 0;
+  font-size: clamp(0.8125rem, 1.35vw, 0.875rem);
+  line-height: 1.45;
+  color: #1e1e1e;
+  max-width: 36ch;
+}
+
+.cases__col--brand .cases__card-intro {
+  color: rgba(30, 30, 30, 1);
+}
+
+/* Серый блок сверху над белым; белый над фото. Контент белого сдвинут от зоны перекрытия */
+.cases__col--body {
+  flex: 0 0 var(--cases-body-w);
+  width: var(--cases-body-w);
+  max-width: var(--cases-body-w);
+  min-width: var(--cases-body-w);
+  box-sizing: border-box;
+  z-index: 2;
+  margin-left: 0;
+  margin-right: calc(-1 * var(--cases-overlap));
+  background-color: #ffffff;
+  padding: var(--space-24) var(--space-24) var(--space-24)
+    calc(var(--space-24) + var(--cases-overlap));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-12);
+  justify-content: flex-start;
+}
+
+.cases__body-title {
+  margin: 0;
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.cases__body-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+  padding-bottom: var(--space-24);
+}
+
+.cases__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: #2563eb;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(30, 30, 30, 0.06);
+  text-decoration: none;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cases__pill:hover {
+  background-color: #f7f8fa;
+  box-shadow: 0 2px 8px rgba(30, 30, 30, 0.1);
+  border-color: rgba(30, 30, 30, 0.14);
+  color: #1e1e1e;
+}
+
+.cases__pill:active {
+  background-color: #f7f8fa;
+  border-color: rgba(30, 30, 30, 0.14);
+  color: #1e1e1e;
+}
+
+.cases__pill:focus-visible {
+  outline: 2px solid rgba(170, 255, 63, 0.8);
+  outline-offset: 2px;
+}
+
+.cases__pill-icon {
+  font-size: 1em;
+  line-height: 1;
+  color: inherit;
+  font-weight: var(--fw-regular);
+}
+
+.cases__body-text {
+  margin: 0;
+  margin-top: auto;
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.55;
+  color: rgba(30, 30, 30, 0.6);
+}
+
+/* Колонка фото: оставшаяся ширина; картинка заполняет ячейку (cover) */
+.cases__col--media {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 200px;
+  min-height: 0;
+  max-width: none;
+  z-index: 1;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.cases__photo {
+  display: block;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*
+ * Ширины brand/body меняются только когда ряд реально сжимается так,
+ * что при базовых 432+430 колонка media упиралась бы в min-width: 200px.
+ * Пороги: сумма колонок + 200 − ~64px (два перекрытия по ~32px).
+ */
+@container cases-list (max-width: 1120px) {
+  .cases__item {
+    --cases-brand-w: 400px;
+    --cases-body-w: 340px;
+  }
+}
+
+@container cases-list (max-width: 998px) {
+  .cases__item {
+    --cases-brand-w: 380px;
+    --cases-body-w: 400px;
+  }
+}
+
+@container cases-list (max-width: 916px) {
+  .cases__item {
+    --cases-brand-w: 340px;
+    --cases-body-w: 320px;
+  }
+}
+
+@container cases-list (max-width: 796px) {
+  .cases__item {
+    --cases-brand-w: 300px;
+    --cases-body-w: 280px;
+  }
+}
+
+@container cases-list (max-width: 716px) {
+  .cases__item {
+    --cases-brand-w: 260px;
+    --cases-body-w: 260px;
+  }
+}
+
+/* Ровно ~768px viewport − padding: media ≈ 200px (сумма 600) */
+@container cases-list (max-width: 736px) {
+  .cases__item {
+    --cases-brand-w: 260px;
+    --cases-body-w: 340px;
+  }
+}
+
+/* Уже 736px - иначе 260+340 даёт слишком узкую media */
+@container cases-list (max-width: 729px) {
+  .cases__item {
+    --cases-brand-w: 240px;
+    --cases-body-w: 320px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .cases__col--brand {
+    padding: var(--space-20) var(--space-20) var(--space-20);
+    padding-top: clamp(48px, 7vw, 64px);
+  }
+
+  .cases__brand-name {
+    top: var(--space-20);
+    left: var(--space-20);
+    right: var(--space-20);
+  }
+
+  .cases__col--body {
+    padding: var(--space-20) var(--space-20) var(--space-20)
+      calc(var(--space-20) + var(--cases-overlap));
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .cases__item {
+    flex-direction: column;
+    --cases-overlap: clamp(16px, 3vw, 24px);
+    box-shadow: 0 8px 22px rgba(30, 30, 30, 0.1);
+    border-radius: var(--radius-xl);
+    overflow: visible;
+  }
+
+  .cases__col--brand,
+  .cases__col--body,
+  .cases__col--media {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: none;
+  }
+
+  .cases__col--brand {
+    padding: var(--space-20) var(--space-20) var(--space-20);
+    padding-top: clamp(88px, 12vw, 116px);
+    order: 1;
+  }
+
+  .cases__logo {
+    max-width: min(128px, 54%);
+    max-height: 88px;
+  }
+
+  .cases__brand-name {
+    top: var(--space-20);
+    left: var(--space-20);
+    right: var(--space-20);
+    max-width: none;
+  }
+
+  .cases__col--body {
+    order: 2;
+    margin-top: calc(-1 * var(--cases-overlap));
+    margin-bottom: calc(-1 * var(--cases-overlap));
+    padding: calc(var(--space-20) + var(--cases-overlap)) var(--space-20) var(--space-20)
+      var(--space-20);
+    box-shadow: 0 12px 28px rgba(30, 30, 30, 0.08);
+  }
+
+  .cases__col--media {
+    order: 3;
+    margin-top: calc(-1 * var(--cases-overlap));
+  }
+
+  .cases__photo {
+    flex: none;
+    width: 100%;
+    height: clamp(220px, 34vw, 280px);
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .cases__head {
+    margin-bottom: var(--space-32);
+  }
+
+  .cases__item {
+    flex-direction: column;
+    min-height: 0;
+    --cases-overlap: clamp(14px, 4vw, 24px);
+    box-shadow: 0 8px 22px rgba(30, 30, 30, 0.1);
+    border-radius: var(--radius-xl);
+    overflow: visible;
+  }
+
+  .cases__col--brand {
+    order: 1;
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    z-index: 3;
+    padding-top: clamp(96px, 24vw, 124px);
+    gap: clamp(var(--space-8), 3vw, var(--space-12));
+    box-shadow: none;
+  }
+
+  .cases__logo {
+    top: var(--space-12);
+    left: var(--space-12);
+    max-width: min(128px, 58%);
+    max-height: 88px;
+  }
+
+  .cases__brand-name {
+    top: var(--space-24);
+    left: var(--space-24);
+    right: var(--space-24);
+    max-width: none;
+  }
+
+  .cases__brand-body {
+    margin-top: clamp(18px, 5vw, var(--space-32));
+    gap: clamp(6px, 2vw, var(--space-12));
+  }
+
+  .cases__col--body {
+    order: 2;
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: calc(-1 * var(--cases-overlap));
+    margin-bottom: calc(-1 * var(--cases-overlap));
+    padding: calc(var(--space-24) + var(--cases-overlap)) var(--space-24)
+      var(--space-20);
+    z-index: 2;
+    gap: var(--space-12);
+    box-shadow: 0 12px 28px rgba(30, 30, 30, 0.08);
+  }
+
+  .cases__body-text {
+    margin-top: 0;
+  }
+
+  .cases__portfolio {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cases__col--media {
+    order: 3;
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 0;
+    margin-top: calc(-1 * var(--cases-overlap));
+    z-index: 1;
+  }
+
+  .cases__photo {
+    flex: none;
+    width: 100%;
+    height: clamp(190px, 52vw, 260px);
+    min-height: 0;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
