@@ -776,3 +776,49 @@
     animation-duration: 22s;
   }
 }
+
+@media (min-width: 1025px) and (min-height: 1101px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero .container {
+    height: auto;
+    min-height: 0;
+    align-self: auto;
+    justify-content: flex-start;
+  }
+
+  .hero__inner {
+    flex: 0 0 auto;
+    min-height: 0;
+    align-content: start;
+  }
+
+  .hero__content,
+  .hero__side {
+    align-self: start;
+    min-height: 0;
+  }
+
+  .hero__actions {
+    margin-top: 0;
+  }
+
+  .hero__features {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero__feature--coral {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .hero__feature--coral .hero__feature-text {
+    display: block;
+  }
+}
