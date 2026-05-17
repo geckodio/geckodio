@@ -793,17 +793,27 @@
   .hero__inner {
     flex: 0 0 auto;
     min-height: 0;
+    align-items: stretch;
     align-content: start;
   }
 
-  .hero__content,
-  .hero__side {
-    align-self: start;
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
     min-height: 0;
   }
 
-  .hero__actions {
+  .hero__side {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    min-height: 0;
     margin-top: 0;
+  }
+
+  .hero__actions {
+    margin-top: auto;
   }
 
   .hero__features {
@@ -814,11 +824,22 @@
 
   .hero__feature--coral {
     height: auto;
-    min-height: 0;
+    min-height: 190px;
+    padding-top: 54px;
+    padding-bottom: 54px;
     overflow: visible;
+    justify-content: center;
   }
 
   .hero__feature--coral .hero__feature-text {
     display: block;
+  }
+
+  .hero__feature--coral .hero__team-tag--top {
+    top: 22px;
+  }
+
+  .hero__feature--coral .hero__team-tag--bottom {
+    bottom: 22px;
   }
 }
