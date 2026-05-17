@@ -842,4 +842,10 @@
   .hero__feature--coral .hero__team-tag--bottom {
     bottom: 22px;
   }
+  .hero__feature--coral .hero__team-tag--coral {
+  font-family: var(--font-sans);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
