@@ -57,10 +57,7 @@
   min-height: clamp(220px, 18vw, 360px);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  background-color: #dff3ff;
-  box-shadow:
-    inset 0 -78px 48px rgba(34, 65, 92, 0.4),
-    0 18px 44px rgba(30, 30, 30, 0.08);
+  background-color: #f7f8fa;
 }
 
 .team-card::before {
