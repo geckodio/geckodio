@@ -97,14 +97,14 @@
   right: clamp(var(--space-20), 2vw, var(--space-32));
   bottom: clamp(var(--space-20), 2vw, var(--space-32));
   z-index: 2;
-  color: var(--color-bg);
-}
+  }
 
 .team-card__name {
   font-size: clamp(1.375rem, 2vw, 2rem);
   font-weight: var(--fw-medium);
   line-height: var(--lh-tight);
   letter-spacing: -0.01em;
+  color: #1e1e1e;
 }
 
 .team-card__role {
@@ -112,7 +112,7 @@
   font-size: clamp(0.875rem, 1.1vw, 1rem);
   font-weight: var(--fw-medium);
   line-height: var(--lh-snug);
-  color: rgba(255, 255, 255, 0.82);
+  color: #1e1e1e;
 }
 
 .about-values {
