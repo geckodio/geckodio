@@ -54,7 +54,7 @@
 
 .team-card {
   position: relative;
-  min-height: clamp(220px, 18vw, 360px);
+  min-height: clamp(300px, 28vw, 420px);
   border-radius: var(--radius-xl);
   overflow: hidden;
   background-color: #dff3ff;
@@ -67,13 +67,13 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 clamp(10px, 2.5vw, 20px);
+  padding: 0 clamp(12px, 2vw, 24px) 72px;
   pointer-events: none;
 }
 
 .team-card--photo .team-card__photo img {
-  max-width: 100%;
-  max-height: min(22rem, 88%);
+  max-width: 92%;
+  max-height: 82%;
   width: auto;
   height: auto;
   display: block;
@@ -83,25 +83,30 @@
 
 .team-card__content {
   position: absolute;
-  left: clamp(var(--space-20), 2vw, var(--space-32));
-  right: clamp(var(--space-20), 2vw, var(--space-32));
-  bottom: clamp(var(--space-20), 2vw, var(--space-32));
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
   z-index: 2;
-  }
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  color: #1e1e1e;
+}
 
 .team-card__name {
-  font-size: clamp(1.375rem, 2vw, 2rem);
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: var(--fw-medium);
-  line-height: var(--lh-tight);
-  letter-spacing: -0.01em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #1e1e1e;
 }
 
 .team-card__role {
-  margin-top: var(--space-8);
-  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  margin-top: 6px;
+  font-size: clamp(0.875rem, 1vw, 1rem);
   font-weight: var(--fw-medium);
-  line-height: var(--lh-snug);
+  line-height: 1.2;
   color: #1e1e1e;
 }
 
