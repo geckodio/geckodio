@@ -48,16 +48,20 @@
 
 .about-hero__team {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(var(--space-12), 1.4vw, var(--space-20));
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 28px;
 }
 
 .team-card {
   position: relative;
-  min-height: clamp(300px, 28vw, 420px);
-  border-radius: var(--radius-xl);
+  min-height: 330px;
+  border-radius: 18px;
   overflow: hidden;
   background-color: #dff3ff;
+}
+
+.team-card::before {
+  display: none;
 }
 
 .team-card__photo {
@@ -67,46 +71,45 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 clamp(12px, 2vw, 24px) 72px;
+  padding: 22px 18px 70px;
   pointer-events: none;
 }
 
 .team-card--photo .team-card__photo img {
-  max-width: 92%;
-  max-height: 82%;
   width: auto;
-  height: auto;
-  display: block;
+  height: 100%;
+  max-height: 255px;
+  max-width: 92%;
   object-fit: contain;
   object-position: bottom center;
 }
 
 .team-card__content {
   position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
   z-index: 2;
-  padding: 14px 16px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(10px);
+  padding: 10px 14px 11px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
   color: #1e1e1e;
 }
 
 .team-card__name {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  font-weight: var(--fw-medium);
+  font-size: 1.45rem;
+  font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: #1e1e1e;
 }
 
 .team-card__role {
-  margin-top: 6px;
-  font-size: clamp(0.875rem, 1vw, 1rem);
-  font-weight: var(--fw-medium);
-  line-height: 1.2;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.15;
   color: #1e1e1e;
 }
 
