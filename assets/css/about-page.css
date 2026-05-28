@@ -86,11 +86,12 @@
 
 .team-card__content {
   position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   z-index: 2;
-  border-radius: 20, 0, 0, 20px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 20px 0 0 20px;
   background: rgba(255, 255, 255);
   color: #1e1e1e;
 }
