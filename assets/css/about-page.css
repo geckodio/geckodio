@@ -188,7 +188,14 @@
 }
 
 .value-card__face--front {
+  align-items: center;
+  text-align: center;
   box-shadow: 0 18px 40px rgba(30, 30, 30, 0.06);
+}
+
+.value-card__face--front .value-card__title {
+  width: 100%;
+  text-align: center;
 }
 
 .value-card__face--back {
@@ -286,33 +293,34 @@
   }
 
   .about-hero__team {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
   }
 
   .team-card {
-    min-height: 360px;
-    border-radius: 20px;
+  min-height: clamp(220px, 62vw, 300px);
+  border-radius: 20px;
   }
 
   .team-card__photo {
-    padding: 22px 18px 76px;
+  padding: 14px 10px 70px;
   }
 
   .team-card--photo .team-card__photo img {
-    max-height: 285px;
+  max-height: clamp(145px, 42vw, 215px);
+  max-width: 96%;
   }
 
   .team-card__content {
-    padding: 18px 20px;
+  padding: 12px 12px;
   }
 
   .team-card__name {
-    font-size: 1.45rem;
+  font-size: clamp(1rem, 5vw, 1.25rem);
   }
 
   .team-card__role {
-    font-size: 0.85rem;
+  font-size: clamp(0.7rem, 3.2vw, 0.8rem);
   }
 
   .values-grid {
