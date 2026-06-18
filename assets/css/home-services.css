@@ -61,6 +61,8 @@
 
 .services__card-content {
   max-width: 92%;
+  position: relative;
+  z-index: 1;
 }
 
 .services__card-title {
@@ -83,21 +85,18 @@
 }
 
 .services__card-image {
-  width: 72%;
-  max-width: 260px;
+  position: absolute;
+  right: var(--space-24);
+  bottom: var(--space-24);
+  width: 58%;
+  max-width: 220px;
   height: auto;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -74px;
+  margin: 0;
   pointer-events: none;
   user-select: none;
+  z-index: 0;
 }
 
-.services__card:nth-child(1) .services__card-image,
-.services__card:nth-child(5) .services__card-image {
-  margin-bottom: -34px;
-}
 
 .services__card-btn {
   --btn-bg: #ffffff;
@@ -122,6 +121,7 @@
   background-color: #ffffff;
   border-radius: var(--radius-md);
   box-shadow: 0 0 18px rgba(30, 30, 30, 0.18);
+  z-index: 2;
 }
 
 .services__card-btn:hover {
@@ -194,9 +194,11 @@
   }
 
   .services__card-image {
-    width: 70%;
-    max-width: 210px;
-    margin-bottom: -66px;
+    right: var(--space-16);
+    bottom: var(--space-16);
+    width: 46%;
+    max-width: 150px;
+    margin: 0;
   }
 
   .services__card-btn {
