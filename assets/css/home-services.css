@@ -21,13 +21,15 @@
 
 .services__card {
   position: relative;
-  min-height: 360px;
+  min-height: 430px;
   height: 100%;
   padding: var(--space-32) var(--space-24) var(--space-24);
   border-radius: var(--radius-lg);
   background-color: #f4f5f9;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 42%);
+  grid-template-rows: auto 1fr auto;
+  column-gap: 16px;
   overflow: hidden;
 }
 
@@ -60,9 +62,9 @@
 }
 
 .services__card-content {
-  max-width: 92%;
-  position: relative;
-  z-index: 1;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  max-width: 100%;
 }
 
 .services__card-title {
@@ -85,16 +87,16 @@
 }
 
 .services__card-image {
-  position: absolute;
-  right: var(--space-24);
-  bottom: var(--space-24);
-  width: 58%;
-  max-width: 220px;
+  grid-column: 2;
+  grid-row: 2 / 4;
+  align-self: end;
+  justify-self: end;
+  width: 100%;
+  max-width: 210px;
   height: auto;
   margin: 0;
   pointer-events: none;
   user-select: none;
-  z-index: 0;
 }
 
 
@@ -108,9 +110,6 @@
   --btn-active-bg: #e8e8e8;
   --btn-active-color: var(--color-primary);
   --btn-active-border: #e8e8e8;
-  position: absolute;
-  left: var(--space-24);
-  bottom: var(--space-24);
   transform: none;
   min-width: 196px;
   min-height: 52px;
@@ -122,6 +121,11 @@
   border-radius: var(--radius-md);
   box-shadow: 0 0 18px rgba(30, 30, 30, 0.18);
   z-index: 2;
+  grid-column: 1;
+  grid-row: 3;
+  align-self: end;
+  justify-self: start;
+  position: static;
 }
 
 .services__card-btn:hover {
@@ -170,7 +174,7 @@
   }
 
   .services__card {
-    min-height: 330px;
+    min-height: 400px;
   }
 }
 
@@ -180,8 +184,10 @@
   }
 
   .services__card {
-    min-height: 300px;
+    min-height: 380px;
     padding: var(--space-24) var(--space-20) var(--space-24);
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 38%);
+    column-gap: 12px;
   }
 
   .services__card-title {
@@ -194,9 +200,7 @@
   }
 
   .services__card-image {
-    right: var(--space-16);
-    bottom: var(--space-16);
-    width: 46%;
+    width: 100%;
     max-width: 150px;
     margin: 0;
   }
