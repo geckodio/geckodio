@@ -85,7 +85,6 @@
 }
 
 .services__card-image {
-  position: absolute;
   right: var(--space-24);
   bottom: var(--space-24);
   width: 58%;
