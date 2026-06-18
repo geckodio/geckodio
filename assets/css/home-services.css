@@ -73,9 +73,9 @@
   line-height: 1.12;
   letter-spacing: -0.01em;
   color: #1f2430;
-  margin-bottom: 0;
-  padding-top: var(--space-32);
-  padding-bottom: var(--space-32);
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 22px;
 }
 
 .services__card-text {
@@ -192,7 +192,9 @@
 
   .services__card-title {
     font-size: var(--fs-24);
-    margin-bottom: var(--space-12);
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 22px;
   }
 
   .services__card-text {
